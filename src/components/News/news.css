@@ -1,0 +1,12 @@
+#News #coins{
+    margin: 4%;
+}
+.card-body .card-title{
+    font-size: medium;
+    font-family: emoji;
+    font-weight: 600;
+}
+.card-body .card-text{
+    font-family: cursive;
+    font-size: small;
+}

@@ -1,0 +1,45 @@
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.heading h3{
+font-family: cursive;
+}
+.heading h2{
+    margin-right: 5%;
+    font-family: cursive;
+}
+.heading a{
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: aliceblue;
+    box-shadow: inset 4px 4px 4px  rgba(0,0,0,.05);
+    height: auto;
+    width: auto;
+    padding: 1%;
+    border-radius: 11px;
+}
+.col{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: 1%;
+}
+.col .status{
+    font-size: large;
+    font-weight: 400;
+    color: brown;
+    font-family: monospace;
+}
+.col .amount{
+    color: black;
+    font-family: cursive;
+    font-weight: 300;
+}
+.all_status{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
