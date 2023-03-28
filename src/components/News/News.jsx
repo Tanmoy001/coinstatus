@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { useGetCryptoNewsQuery } from '../../services/cryptoNewsApi'
 import './news.css'
+import BeatLoader from 'react-spinners/BeatLoader'
 function News({simplified}) {
 const count = simplified?10:100;
 const {data:cryptoNews,isFetching}=useGetCryptoNewsQuery({newsCategory:'Cryptocurrency',count:count});
@@ -17,7 +18,10 @@ const {data:cryptoNews,isFetching}=useGetCryptoNewsQuery({newsCategory:'Cryptocu
     
   }, [filterData,searchTerm]);
 
-  if(isFetching)return'Loading.......'
+  if(isFetching)return<BeatLoader className='rotateloader'
+  style={{height:'100vh'}}
+  color={'#3189'}
+/>
   return (
     <section id='News'>
       {!simplified &&(

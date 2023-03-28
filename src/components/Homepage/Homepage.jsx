@@ -6,8 +6,10 @@ import millify from 'millify';
 import Cryptocurrencies from '../Cryptocurrencies/Cryptocurrencies';
 import News from '../News/News';
 import { Link } from 'react-router-dom';
+
+import BeatLoader from 'react-spinners/BeatLoader'
 import './homepage.css'
-const Homepage =() =>{
+const Homepage =({mode}) =>{
   // const dispatch = useDispatch();
   // useEffect(() => {
   //   console.log('from  home')
@@ -17,7 +19,10 @@ const Homepage =() =>{
   const {data,isFetching}=useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
   console.log(data,'data');
-  if(isFetching)return'Loading.......'
+  if(isFetching)return<BeatLoader className='rotateloader'
+  style={{height:'100vh'}}
+  color={'#3189'}
+/>
   return (
     <section id='home'>
       <div className='container homepage'>
@@ -50,7 +55,7 @@ const Homepage =() =>{
         <div className='heading'>
           
           <h2>Top 10 Cryptocurrencies in the world</h2>
-          <Link to="/cryptocurrencies" >More</Link>
+          <Link className='cryptocurrencies' to="/cryptocurrencies" >More</Link>
           </div>
           <Cryptocurrencies simplified/>
           

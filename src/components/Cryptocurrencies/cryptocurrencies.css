@@ -12,9 +12,23 @@ justify-content: center;
 #coins .card{
     width: 18rem;
     margin: 5%;
-    height: 23rem;
+    height: auto;
     background: aliceblue;
     box-shadow: inset 20px 20px 20px rgba(0,0,0,.05), 25px 35px 20px rgba(0,0,0,.05);
+  
+}
+#coins .linking{
+    margin: 5%;
+    text-decoration: none;
+}
+#coins .linking:hover{
+    margin: 4.8%;
+}
+#coins .card:hover{
+    width: 18rem;
+    margin: 4%;
+    height: 23rem;
+    background:beige;
   
 }
 .card-body{

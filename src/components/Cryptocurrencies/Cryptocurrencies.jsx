@@ -4,7 +4,8 @@ import React,{useState,useEffect} from 'react'
 // import millify from 'millify'
 // import { Link } from 'react-router-dom'
 import { useGetCryptosQuery } from '../../services/cryptoApi'
-
+import { Link } from 'react-router-dom';
+import BeatLoader from 'react-spinners/BeatLoader'
 const Cryptocurrencies = ({simplified}) => {
   const count = simplified?10:100;
   console.log(count,'count')
@@ -23,7 +24,10 @@ console.log(cryptosList,'cryptolist')
     
   }, [filterData,searchTerm]);
   
-  if(isFetching)return'Loading.......'
+  if(isFetching)return<BeatLoader className='rotateloader'
+  style={{height:'100vh',width:'100%'}}
+  color={'#3189'}
+/>
   return (
     <>
     {console.log(crypto,'filterdata')}
@@ -38,13 +42,14 @@ console.log(cryptosList,'cryptolist')
   </div>
 </nav>  
 )}
+
 <div id='coins'>
     {crypto && crypto.map((currency)=>(
-
+      <Link className='linking' to={`/crypto/${currency.uuid}`} >
 <div className="card" style={{width: '18rem',margin:'5%' }}key={currency.id}>
 <img src={currency.iconUrl}className="card-img-top" alt="..."/>
 <div className="card-body">
-  <h5 className="card-title">{currency.name}</h5>
+  <h5 className="card-title">{currency.rank}.&nbsp;&nbsp;{currency.name}</h5>
 </div>
 <ul className="list-group list-group-flush">
 <li className="list-group-item">Rank : {currency.rank}</li>
@@ -53,11 +58,12 @@ console.log(cryptosList,'cryptolist')
  
 </ul>
 </div>
-
+</Link>
     ))}
 
     
    </div>
+   
     
     </>
   )

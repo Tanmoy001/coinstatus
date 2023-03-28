@@ -1,0 +1,71 @@
+#cryptodetails .all_status{
+    display: flex;
+    gap: 5%;
+}
+#cryptodetails h3{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: brown;
+}
+#cryptodetails .descrioption{
+    justify-content: center;
+    text-align: center;
+    margin-top: 1em;
+    align-items: center;
+}
+.icon_and_tag{
+    display: flex;
+    margin-left:18%;
+}
+#cryptodetails .all_status .status{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+   
+    width: 100%;
+    background: aliceblue;
+}
+#cryptodetails .all_status .status h4{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#cryptodetails .select-timeperiod{
+    width: 8rem;
+    margin-left: 13%;
+}
+svg{
+    margin: 5px;
+}
+.real_value{
+    margin-left: 2rem;
+}
+#cryptodetails .chart-header {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#cryptodetails .chart-header h3{
+    width: 44%;
+    text-align: start;
+    margin-left: 16%;
+}
+
+#cryptodetails .chart-header h4{
+    width: auto;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 772px) {
+    #cryptodetails .all_status{
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }

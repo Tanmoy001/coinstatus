@@ -1,7 +1,7 @@
 .heading {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    padding-top: 1rem;
 }
 .heading h3{
 font-family: cursive;
@@ -42,4 +42,7 @@ font-family: cursive;
 .all_status{
     padding-bottom: 1rem;
     padding-top: 1rem;
+}
+.crypto_conins.heading.cryptocurrencies{
+    text-decoration: none;
 }
