@@ -8,7 +8,7 @@ import {
     Link
   } from "react-router-dom";
   
-function navbar() {
+function navbar({togglemode}) {
   return (
     <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
     <Container>
@@ -20,11 +20,14 @@ function navbar() {
             
         <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
         <li className="nav-item"><Link className="nav-link" to="/cryptocurrencies">Cryptocurrencies</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/exchanges">Exchanges</Link></li>
+        {/* <li className="nav-item"><Link className="nav-link" to="/exchanges">Exchanges</Link></li> */}
         <li className="nav-item"><Link className="nav-link" to="/news">News</Link></li>
          
           
         </Nav>
+        <div className="form-check form-switch">
+  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={()=>togglemode(null)}/>
+</div>
         {/* <Nav>
           <Nav.Link href="#deets">More deets</Nav.Link>
           <Nav.Link eventKey={2} href="#memes">
@@ -32,6 +35,7 @@ function navbar() {
           </Nav.Link>
         </Nav> */}
       </Navbar.Collapse>
+
     </Container>
   </Navbar>
   )
