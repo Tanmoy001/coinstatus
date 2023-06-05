@@ -32,20 +32,20 @@ const Homepage =({mode}) =>{
            <div className='all_status'>
               <Row className='coin_status'>
                 <Col ><div className='status' title='Total Crypto'>Total Crypto</div> 
-                <div className='status amount ' title='Total Crypto' >{globalStats.total}</div> </Col>
+                <div className='status amount ' title='Total Crypto' >{globalStats?.total}</div> </Col>
                 <Col ><div className='status' title='Total Crypto'>Total Exchanges</div>
-                <div className='status amount' title='Total Crypto' >{globalStats.totalExchanges}</div></Col>
+                <div className='status amount' title='Total Crypto' >{globalStats?.totalExchanges}</div></Col>
                </Row>
                 <Row className='coin_status'>
                   <Col ><div className='status' title='Total Crypto'>Total Market Cap</div>
-                  <div className='status amount' title='Total Crypto' >{millify(globalStats.totalMarketCap)}</div></Col>
+                  <div className='status amount' title='Total Crypto' >{millify(globalStats?.totalMarketCap)}</div></Col>
               
                   <Col ><div className='status' title='Total Crypto'>Total 24h Volume</div>
-                  <div className='status amount' title='Total Crypto' >{millify(globalStats.total24hVolume)}</div></Col>
+                  <div className='status amount' title='Total Crypto' >{millify(globalStats?.total24hVolume)}</div></Col>
                 </Row>
                 <Row className='coin_status'>
                   <Col ><div className='status' title='Total Crypto'>Total Markets</div>
-                  <div className='status amount' title='Total Crypto' >{globalStats.totalMarkets}</div></Col>
+                  <div className='status amount' title='Total Crypto' >{globalStats?.totalMarkets}</div></Col>
                   <Col ><div className='status' title='Total Crypto'></div>
                   <div className='status amount' title='Total Crypto' ></div></Col>
                 </Row>

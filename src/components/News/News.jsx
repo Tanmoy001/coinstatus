@@ -37,7 +37,7 @@ const {data:cryptoNews,isFetching}=useGetCryptoNewsQuery({newsCategory:'Cryptocu
 <div id='coins'>
     {cryptonews && cryptonews.map((news,i)=>(
 
-<div className="card" style={{width: "25%",height:'auto',margin:'2%'}}key={i}>
+<div className="card" key={i}>
 <img className="card-img-top" src={news.image?news.image.thumbnail.contentUrl:"https://m.foolcdn.com/media/dubs/images/original_imagesoriginal_imageshttpsg.foolcdn.c.width-880_SfbkM9V.jpg"} alt="...."/>
 <div className="card-body">
   <h5 className="card-title">{(news.name > 10) ? (`${news.name.substring(0,30)}....`):news.name}</h5>
