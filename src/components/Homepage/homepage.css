@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     padding-top: 1rem;
+    align-items: center;
 }
 .heading h3{
 font-family: cursive;
@@ -11,13 +12,14 @@ font-family: cursive;
     font-family: cursive;
 }
 .heading a{
+    border: 1px solid blue;
     text-decoration: none;
     justify-content: center;
     display: flex;
     align-items: center;
     background: aliceblue;
-    box-shadow: inset 4px 4px 4px  rgba(0,0,0,.05);
-    height: auto;
+    box-shadow: inset 4px 16px 4px  rgba(0,0,0,.05);
+    height: 43px;
     width: auto;
     padding: 1%;
     border-radius: 11px;

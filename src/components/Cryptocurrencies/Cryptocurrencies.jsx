@@ -46,7 +46,7 @@ console.log(cryptosList,'cryptolist')
 <div id='coins'>
     {crypto && crypto.map((currency)=>(
       <Link className='linking' to={`/crypto/${currency.uuid}`} >
-<div className="card" style={{width: '18rem',margin:'5%' }}key={currency.id}>
+<div className="card" key={currency.id}>
 <img src={currency.iconUrl}className="card-img-top" alt="..."/>
 <div className="card-body">
   <h5 className="card-title">{currency.rank}.&nbsp;&nbsp;{currency.name}</h5>

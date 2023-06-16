@@ -46,3 +46,19 @@ justify-content: center;
     background: aliceblue;
     color: black;
 }
+
+
+@media only screen and (max-width: 550px) {
+  
+.coin_status {
+display: block;
+}
+}
+
+@media only screen and (max-width: 450px) {
+  
+        #coins .card{
+  margin: 0%;        
+  }
+ 
+}
