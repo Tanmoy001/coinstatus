@@ -8,15 +8,12 @@ import { Link } from 'react-router-dom';
 import BeatLoader from 'react-spinners/BeatLoader'
 const Cryptocurrencies = ({simplified}) => {
   const count = simplified?10:100;
-  console.log(count,'count')
+ 
   const {data:cryptosList,isFetching}=useGetCryptosQuery(count);
   const [crypto, setCrypto] = useState([])
   const [searchTerm, setSearchTerm] = useState('');
   const filterData = cryptosList?.data?.coins;
   
-  console.log(cryptosList,'cryptolist')
-  console.log(filterData,'filterdata');
-console.log(cryptosList,'cryptolist')
   useEffect(() => {
     
     const filteredData = filterData?filterData.filter((coin)=>coin.name.toLowerCase().includes(searchTerm.toLowerCase())):''
@@ -30,7 +27,6 @@ console.log(cryptosList,'cryptolist')
 />
   return (
     <>
-    {console.log(crypto,'filterdata')}
     
       {!simplified &&(
     <nav className="navbar bg-light">

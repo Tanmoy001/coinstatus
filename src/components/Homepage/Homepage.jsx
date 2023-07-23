@@ -18,7 +18,6 @@ const Homepage =({mode}) =>{
   // }, [dispatch])
   const {data,isFetching}=useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
-  console.log(data,'data');
   if(isFetching)return<BeatLoader className='rotateloader'
   style={{height:'100vh'}}
   color={'#3189'}

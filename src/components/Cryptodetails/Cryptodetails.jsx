@@ -13,17 +13,12 @@ import BeatLoader from 'react-spinners/BeatLoader'
 import { useGetCryptoHistoryQuery } from '../../services/cryptoApi'
 const Cryptodetails=()=> {
   const { coinId } = useParams();
-  console.log(coinId,'uuuidddddddddddddddd')
   
   const [timePeriod, setTimeperiod] = useState('7d');
-  console.log(timePeriod,'timePeriod')
   const {data,isFetching} = useGetCryptoDetailsQuery(coinId);
 
   const {data:coinHistory} = useGetCryptoHistoryQuery({coinId,timePeriod});
-  console.log(coinHistory,'history')
  const details=data?.data?.coin
-console.log(data);
-  
   if(isFetching)return <BeatLoader className='rotateloader'
   style={{height:'100vh'}}
   color={'#3189'}

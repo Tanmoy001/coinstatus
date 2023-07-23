@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './navbar.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -8,9 +8,28 @@ import {
     Link
   } from "react-router-dom";
   
-function navbar({togglemode}) {
+function NavigationBar ({togglemode}) {
+   const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isVisible = prevScrollPos > currentScrollPos;
+
+      setPrevScrollPos(currentScrollPos);
+      setIsVisible(isVisible);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]); 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+     <nav style={{ display: isVisible ? 'block' : 'none' }}> 
+    <Navbar className='navbar' collapseOnSelect expand="lg" bg="primary" variant="dark">
     <Container>
         <GiCoins style={{marginRight: "15px",height:'20px',width:'20px'}}/>
       <Navbar.Brand>CoinCom</Navbar.Brand>
@@ -38,7 +57,8 @@ function navbar({togglemode}) {
 
     </Container>
   </Navbar>
+   </nav> 
   )
 }
 
-export default navbar
+export default NavigationBar 

@@ -7,7 +7,7 @@ const cryptoNewsApiHeaders  ={
 }
 const baseUrl ='https://bing-news-search1.p.rapidapi.com' ;
 const createRequest = (url )=>({url,headers:cryptoNewsApiHeaders })
-console.log('call me +1')
+
 export const cryptoNewsApi = createApi ({
     
     reducerPath: 'cryptoNewsApi',
